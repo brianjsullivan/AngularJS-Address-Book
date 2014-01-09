@@ -1,0 +1,45 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
+    <script src="address.js"></script>
+    <link rel="stylesheet" href="address.css">
+    <style>
+
+	</style>
+  </head>
+  <body>
+    <div id="controlArea" ng-controller="AddressCtrl">
+      <div id="basicContactList">
+        <span class="basicContactName" ng-repeat="contact in contactList">
+          <a class="basicContactNameLink" href="" ng-click="showThisContact()">{{contact.firstName}} {{contact.lastName}}</a><br>
+        </span>
+      </div>
+
+      <div id="searchArea">
+        <input type="text" placeholder="First or Last Name" ng-model="searchInput">
+        <br>
+        <span class="contactSearchResult">
+          {{getContactInfo(['firstName', 'lastName']).firstName}} {{getContactInfo(['firstName', 'lastName']).lastName}}<br>
+          {{getContactInfo(['firstName', 'lastName']).streetAddress}}<br>
+          {{getContactInfo(['firstName', 'lastName']).city}} {{getContactInfo(['firstName', 'lastName']).state}} {{getContactInfo(['firstName', 'lastName']).zip}}<br>
+          {{getContactInfo(['firstName', 'lastName']).phoneNum}} {{getContactInfo(['firstName', 'lastName']).email}}<br>
+        </span>
+      </div>
+    </div>
+
+    <!--<div id="controlArea" ng-controller="AddressCtrl">
+      <input type="text" placeholder="Type Here" maxlength="160" ng-model="message">
+      <br>
+      <div id="messageArea">
+        &nbsp;Your message:<br>
+        <span id="messageOut">{{message}}</span>
+      </div>
+      <div class="spacerSmall"></div>
+      <div id="countArea">
+        <span id="activeCount">{{getMessageLength()}}</span> of 160 characters used
+      </div>
+      <div class="spacerSmall"></div>
+    </div>-->
+  </body>
+</html>

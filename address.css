@@ -1,0 +1,36 @@
+body {
+	font-family: Arial, Helvetica, sans-sarif;
+}
+#controlArea {
+	background-color:#b9e2e3;
+	min-height:70px;
+	height:auto;
+	width:500px;
+	border:1px solid #010101;
+	color:#000;
+}
+#controlArea input {
+	margin:5px;
+	height:15px;
+	width:150px;
+}
+#messageArea {
+	font-size:12px;
+	color:#4a61d5;
+}
+#messageOut {
+	color:#464646;
+	margin:10px;
+	word-wrap:break-word;
+	display:block;
+	border:1px dashed #ffffff;
+}
+#countArea {
+	font-size:10px;
+	margin:-10px 5px 0 0;
+	float:right;
+}
+.spacerSmall {
+	height:3px;
+	background:transparent;
+}
