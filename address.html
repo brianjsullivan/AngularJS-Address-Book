@@ -6,18 +6,18 @@
     <link rel="stylesheet" href="address.css">
   </head>
   <body>
-    <div id="controlArea" ng-controller="AddressCtrl">
-      <div id="basicContactList">
-        <span class="basicContactName" ng-repeat="contact in contactList">
-          <a class="basicContactNameLink" href="" ng-click="showThisContact()">{{contact.firstName}} {{contact.lastName}}</a><br>
+    <div id="control-area" ng-controller="AddressCtrl">
+      <div id="basic-contact-list">
+        <span class="basic-contact-name" ng-repeat="contact in contactList">
+          <a class="basic-contact-name-link" href="" ng-click="showThisContact()">{{contact.firstName}} {{contact.lastName}}</a><br>
         </span>
       </div>
 
-      <div id="searchArea">
-        <input type="text" placeholder="First or Last Name" ng-model="searchInput">
+      <div id="search-area">
+        <input type="text" placeholder="Search Address Book" ng-model="searchInput">
         <br>
-        <span class="contactSearchResult">
-          <!--{{matchSearchToContacts()}}-->{{groomSearchResults()}}
+        <span class="contact-search-result">
+          <!--{{matchSearchToContacts()}}  {{groomSearchResults()}}-->
           <!--
           {{getContactInfo(['firstName', 'lastName']).firstName}} {{getContactInfo(['firstName', 'lastName']).lastName}}<br>
           {{getContactInfo(['firstName', 'lastName']).streetAddress}}<br>
@@ -25,6 +25,31 @@
           {{getContactInfo(['firstName', 'lastName']).phoneNum}} {{getContactInfo(['firstName', 'lastName']).email}}<br>
           -->
         </span>
+        <table id="search-results" cellspacing="10">
+          <tr ng-repeat="contact in contactList | filter:searchInput">
+            <td>{{contact.firstName}} {{contact.lastName}}</td>
+            <td>{{contact.streetAddress}}</td>
+            <td>{{contact.city}}, {{contact.state}} {{contact.zip}}</td>
+            <td>{{contact.phoneNum}}</td>
+            <td>{{contact.email}}</td>
+
+            <td class="contact-button">
+              <a href="" ng-click="openContact()">
+                <img src="img/call-icon.png" title="CONTACT" />
+              </a>
+            </td>
+            <td class="contact-button">
+              <a href="" ng-click="editContact()">
+                <img src="img/edit-icon.png" title="EDIT" />
+              </a>
+            </td>
+            <td class="contact-button">
+              <a href="" ng-click="deleteContact()">
+                <img src="img/delete-icon.png" title="DELETE" />
+              </a>
+            </td>
+          </tr>
+        </table>
       </div>
     </div>
   </body>

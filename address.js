@@ -6,6 +6,14 @@ function AddressCtrl($scope) {
       firstName: "Donna", lastName: "Jackson", streetAddress: "80 First Avenue", city: "New York", state: "NY", zip: "10016", phoneNum: "212-989-9896", email: "donnajax@yahoo.com"
     },{
       firstName: "Jenny", lastName: "Sinhouse", streetAddress: "22 City Lane", city: "Stanford", state: "CT", zip: "90452", phoneNum: "551-565-6362", email: "jenny.sinhouse@gmail.com"
+    },{
+      firstName: "Bert", lastName: "Walters", streetAddress: "22 New View", city: "Pittsburgh", state: "PA", zip: "30565", phoneNum: "675-548-3258", email: "bert.p.walters@me.com"
+    },{
+      firstName: "Muhammed", lastName: "Omar", streetAddress: "599 Fountain Place", city: "Burlington", state: "VT", zip: "13565", phoneNum: "353-984-1425", email: "moomar91@gmail.com"
+    },{
+      firstName: "Sol", lastName: "De La Playa", streetAddress: "6 Union Street", city: "Richmond", state: "VA", zip: "59669", phoneNum: "621-854-1244", email: "delasol63@aol.com"
+    },{
+      firstName: "Sit", lastName: "Singh", streetAddress: "1490 Brown Avenue", city: "San Antonio", state: "TX", zip: "36202", phoneNum: "313-5620-0251", email: "s.singh@about.me"
     }
   ];
 
