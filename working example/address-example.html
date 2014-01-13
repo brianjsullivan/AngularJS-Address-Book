@@ -1,0 +1,43 @@
+<!doctype html>
+<html ng-app>
+    
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js">
+            
+        </script>
+        <script src="address-example.js"></script>
+    </head>
+    
+    <body>
+        
+<h2>Address Book</h2>
+
+        <div ng-controller="AddressBookController">
+            <div id="firstwrapper">
+                <table border=1>
+                    <tr>
+                        <th>first name</th>
+                        <th>last name</th>
+                        <th>number</th>
+                    </tr>
+                    <tr ng-repeat="contact in contacts">
+                        <td>{{contact.firstName}}</td>
+                        <td>{{contact.lastName}}</td>
+                        <td>{{contact.number}}</td>
+                    </tr>
+                </table>
+                <p></p>
+            </div>
+            <div id="secondwrapper">
+                <form ng-submit="addContact()">
+                    <input type="text" ng-model="firstName" size="10" placeholder="first name...">
+                    <input type="text" ng-model="lastName" size="10" placeholder="last name...">
+                    <input type="text" ng-model="number" size="10" placeholder="number...">
+                    <input type="submit" value="add">
+                </form>
+                <span ng-model="errorMsg" class="errorMsg" style="color:#FF0000;">{{errorMsg}}</span>
+            </div>
+        </div>
+    </body>
+
+</html>

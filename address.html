@@ -17,10 +17,13 @@
         <input type="text" placeholder="First or Last Name" ng-model="searchInput">
         <br>
         <span class="contactSearchResult">
+          <!--{{matchSearchToContacts()}}-->{{groomSearchResults()}}
+          <!--
           {{getContactInfo(['firstName', 'lastName']).firstName}} {{getContactInfo(['firstName', 'lastName']).lastName}}<br>
           {{getContactInfo(['firstName', 'lastName']).streetAddress}}<br>
           {{getContactInfo(['firstName', 'lastName']).city}} {{getContactInfo(['firstName', 'lastName']).state}} {{getContactInfo(['firstName', 'lastName']).zip}}<br>
           {{getContactInfo(['firstName', 'lastName']).phoneNum}} {{getContactInfo(['firstName', 'lastName']).email}}<br>
+          -->
         </span>
       </div>
     </div>
